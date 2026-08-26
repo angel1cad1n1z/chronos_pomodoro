@@ -3,10 +3,14 @@ import { Logo } from "./components/logo/logo";
 import { Menu } from "./components/menu/menu.tsx";
 import { CountDown } from "./components/countDown/countDown.tsx";
 import { DefaultInput } from "./components/defaultInput/defaltInput.tsx";
+import { Cycles } from "./components/cycles/cycles";
+import { DefaultButton } from "./components/defaultButton/defaltButton";
+import { Footer } from "./components/footer/footer.tsx";
+
+import { PlayCircleIcon } from "lucide-react";
 
 import "./styles/theme.css";
 import "./styles/global.css";
-import { Cycles } from "./components/cycles/cycles";
 
 export function App() {
   return (
@@ -36,11 +40,14 @@ export function App() {
 
           <div className="formRow">
             <Cycles />
-            <p>0 0 0 0 0</p>
           </div>
 
           <div className="formRow">
-            <button type="submit">Add Task</button>
+            <DefaultButton icon={<PlayCircleIcon />} color="red" />
+          </div>
+
+          <div className="formRow">
+            <Footer />
           </div>
         </form>
       </Container>
